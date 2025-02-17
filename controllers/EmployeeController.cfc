@@ -26,6 +26,6 @@
         </cfif>
 
         <!--- Insert Employee Record into the Database --->
-        <cfset employeeModel.addEmployee(arguments.name, arguments.email, arguments.role, arguments.mobile, arguments.joinDate, arguments.salary)>
+        <cfset employeeModel.addEmployee(arguments.name, arguments.email, arguments.role, arguments.mobile, arguments.joinDate, arguments.salary, pdfPath)>
     </cffunction>
 </cfcomponent>
