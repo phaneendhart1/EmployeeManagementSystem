@@ -151,13 +151,13 @@
                         <p><strong>Join Date:</strong> #dateFormat(join_date, 'yyyy-mm-dd')#</p>
                         <p><strong>Salary:</strong> #salary#</p>
                         <p><strong>Created At:</strong> #dateFormat(created_at, 'yyyy-mm-dd HH:mm:ss')#</p>
-                        <p>
+                        <!---<p>
                             <cfif len(offer_letter_path)>
                                 <a href="#offer_letter_path#" class="pdf-link" target="_blank">View PDF</a>
                             <cfelse>
                                 Not Generated
                             </cfif>
-                        </p>
+                        </p>--->
                     </div>
                 </div>
             </div>
