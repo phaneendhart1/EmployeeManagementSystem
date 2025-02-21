@@ -51,6 +51,19 @@
             background: #218838;
         }
     </style>
+    <script>
+        function toggleEmailCheckbox() {
+            var generateOffer = document.getElementById("generateOffer");
+            var sendEmailContainer = document.getElementById("sendEmailContainer");
+
+            if (generateOffer.checked) {
+                sendEmailContainer.style.display = "block";
+            } else {
+                sendEmailContainer.style.display = "none";
+                document.getElementById("sendEmail").checked = false; // Uncheck when hidden
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -76,14 +89,14 @@
         <input type="text" name="salary" id="salary" required>
 
         <label>
-            <input type="checkbox" name="generateOffer" value="yes"> Generate Offer Letter
+            <input type="checkbox" name="generateOffer" id="generateOffer" value="yes" onclick="toggleEmailCheckbox()"> Generate Offer Letter
         </label>
-        <br>
-        <label>
-            <input type="checkbox" name="sendEmail" value="yes"> Send Email to Candidate
-        </label>
-        <br>
-        <input type="submit" value="Add Employee">
+        <div id="sendEmailContainer" style="display: none;">
+            <label>
+                <input type="checkbox" name="sendEmail" value="yes"> Send Email to Candidate
+            </label>
+        </div>
+    <input type="submit" value="Add Employee">
     </form>
 </div>
 
